@@ -65,7 +65,7 @@ const init = async () => {
   try {
     clearInterval(handle)
     scanned.value = false
-    const res = await client.GET('/bili/login')
+    const res = await client.GET('/bili/login/url')
     data.value = res.data
     handle = setInterval(poll, 1000)
   } finally {

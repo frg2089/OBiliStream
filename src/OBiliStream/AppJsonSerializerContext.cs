@@ -1,8 +1,10 @@
 ﻿using System.Text.Json.Serialization;
 
-using OBiliStream.BApi.Models;
+using OBiliStream.Model;
 
-[JsonSerializable(typeof(StartLiveData))]
+[JsonSerializable(typeof(StartLiveRequest))]
+[JsonSerializable(typeof(UpdateLiveRequest))]
+[JsonSerializable(typeof(SendChatRequest))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 }

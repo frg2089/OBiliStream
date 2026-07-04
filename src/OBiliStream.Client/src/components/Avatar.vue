@@ -5,7 +5,7 @@
       w-9
       h-9
       rounded-full
-      :src="path(`/bili/get?url=${encodeURIComponent(face)}`)" />
+      :src="face" />
     <img
       v-if="frame"
       absolute
@@ -15,7 +15,7 @@
       h-16
       block
       z-1
-      :src="path(`/bili/get?url=${encodeURIComponent(frame)}`)" />
+      :src="frame" />
   </div>
 </template>
 

@@ -130,7 +130,7 @@ async Task<Results<Ok<StartLiveData>, ProblemHttpResult>> (
         }
         catch (BiliApiResultException e) when (e.Code is 60024 or 60043)
         {
-            var result = e.DataResult.Deserialize(AppJsonSerializerContext.Default.StartLiveData)
+            var result = e.DataResult.Deserialize(OBiliStreamJsonSerializerContext.Default.StartLiveData)
                 ?? throw new BiliApiException("无法反序列化为对象", e);
 
             return TypedResults.Problem(

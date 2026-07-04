@@ -14,7 +14,7 @@
         <img
           block
           object-cover
-          :src="path(`/bili/get?url=${encodeURIComponent(cover)}`)" />
+          :src="cover" />
       </NUploadDragger>
     </NUpload>
   </div>
