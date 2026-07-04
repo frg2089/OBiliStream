@@ -1,4 +1,4 @@
-# BiliLive.Observer：OBS Bilibili 开播插件
+# OBiliStream：OBS Bilibili 开播插件
 
 用于嵌入 OBS 中实现一站式 B 站开播。债见，Bilibili 直播姬（
 
@@ -6,13 +6,13 @@
 
 ## Usage 食用方法
 
-[下崽指路](https://github.com/frg2089/BiliLive.Observer/releases/latest)
+[下崽指路](https://github.com/frg2089/OBiliStream/releases/latest)
 
 另需依赖：[ASP.NET Core 10.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-aspnetcore-10.0.0-windows-hosting-bundle-installer) ←点击下载安装运行时整合包 :)
 
 ---
 
-下载解压`BiliLive.Observer.zip`，双击运行`BiliLive.Service.exe`，不出意外应该能看到如下日志：
+下载解压`OBiliStream.zip`，双击运行`OBiliStream.exe`，不出意外应该能看到如下日志：
 
 ```log
 info: Microsoft.Hosting.Lifetime[14]
@@ -26,7 +26,7 @@ info: Microsoft.Hosting.Lifetime[0]
 ```
 
 > [!tip]
-> 现在也可以在 OBS 的“工具”→“脚本”里添加`BiliLive.Observer.lua`脚本，这样它就可以跟随 OBS 自动运行了。
+> 现在也可以在 OBS 的“工具”→“脚本”里添加`OBiliStream.lua`脚本，这样它就可以跟随 OBS 自动运行了。
 
 默认情况下插件会使用 5000 端口。你可以直接在浏览器访问`http://localhost:5000`检验下服务是否成功启动。
 

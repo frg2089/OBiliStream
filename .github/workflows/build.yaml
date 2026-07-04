@@ -47,9 +47,9 @@ jobs:
         name: Collect artifact
         uses: actions/upload-artifact@v7
         with:
-          name: BiliLive.Observer
+          name: OBiliStream
           path: |
-            ./artifacts/publish/BiliLive.Service/release/*
+            ./artifacts/publish/OBiliStream/release/*
           retention-days: 7
 
   publish:
@@ -65,9 +65,9 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           skip-decompress: true
-          name: BiliLive.Observer
+          name: OBiliStream
 
       - name: Release
         uses: softprops/action-gh-release@v3
         with:
-          files: BiliLive.Observer.zip
+          files: OBiliStream.zip
