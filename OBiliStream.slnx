@@ -12,5 +12,6 @@
     <File Path="ReadMe.md" />
   </Folder>
   <Project Path="src/OBiliStream.BApi/OBiliStream.BApi.csproj" />
+  <Project Path="src/OBiliStream.Client/OBiliStream.Client.esproj" />
   <Project Path="src/OBiliStream/OBiliStream.csproj" />
 </Solution>

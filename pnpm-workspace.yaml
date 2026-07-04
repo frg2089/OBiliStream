@@ -1,6 +1,4 @@
 packages:
-  - web/*
-
+  - src/OBiliStream.Client
 allowBuilds:
   '@parcel/watcher': true
-  esbuild: true

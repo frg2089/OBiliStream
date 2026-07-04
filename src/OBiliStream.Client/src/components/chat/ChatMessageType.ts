@@ -104,10 +104,7 @@ export namespace ContentPartType {
  * @description 用于显示的消息
  */
 export type AnyDisplayMessage =
-  | TextMessage
-  | GiftMessage
-  | MemberMessage
-  | SuperChatMessage
+  TextMessage | GiftMessage | MemberMessage | SuperChatMessage
 
 export type MessageId<T extends AnyDisplayMessage> = T extends { id: string }
   ? T['id']

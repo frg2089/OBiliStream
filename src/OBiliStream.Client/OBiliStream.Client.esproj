@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk">
+  <PropertyGroup>
+    <JavaScriptTestRoot>.\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Vitest</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+    <BuildCommand>pnpm build</BuildCommand>
+    <StartupCommand>pnpm dev</StartupCommand>
+
+    <ShouldRunNpmInstall>false</ShouldRunNpmInstall>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NpmInstallCheck>$(MSBuildProjectDirectory)\..\..\pnpm-lock.yaml</NpmInstallCheck>
+  </PropertyGroup>
+
+  <Target Name="PnpmRestore" BeforeTargets="Restore" DependsOnTargets="PreNpmInstallCheck" Inputs="$(PackageJsonDirectory)\package.json" Outputs="$(NpmInstallCheck)">
+    <Message Importance="high" Text="Restoring dependencies using 'pnpm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(PackageJsonDirectory)" Command="pnpm install">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCodeNpmInstall" />
+    </Exec>
+    <Touch Files="$(NpmInstallCheck)" Condition="'$(ErrorCodeNpmInstall)' == '0'" AlwaysCreate="true" />
+  </Target>
+</Project>

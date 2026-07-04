@@ -1,3 +1,8 @@
 {
-  "recommendations": ["esbenp.prettier-vscode", "oxc.oxc-vscode"]
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "VoidZero.vite-plus-extension-pack"
+  ]
 }

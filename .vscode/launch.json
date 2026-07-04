@@ -7,8 +7,15 @@
     {
       "type": "msedge",
       "request": "launch",
-      "name": "针对 localhost 启动 Edge",
-      "url": "http://localhost:5173",
+      "name": "localhost (Edge)",
+      "url": "https://localhost:64149",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "localhost (Chrome)",
+      "url": "https://localhost:64149",
       "webRoot": "${workspaceFolder}"
     }
   ]
